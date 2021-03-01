@@ -29,6 +29,8 @@ class MainActivity : AppCompatActivity() {
                 tvSelectedDate.text = selectedDate
                 val sdf = SimpleDateFormat("dd/MM/yyyy",Locale.ENGLISH)
                 val theDate = sdf.parse(selectedDate)
+                /*to modify the app to show age in days divide it further with 60
+                to convert to hours and then with 24 to convert to days*/
                 val selectedDateInMinutes = theDate!!.time / 60000
                 val currentDate = sdf.parse(sdf.format(System.currentTimeMillis()))
                 val currentDateToMinutes = currentDate!!.time / 60000
